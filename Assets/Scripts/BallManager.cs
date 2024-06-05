@@ -9,8 +9,9 @@ public class BallManager : MonoBehaviour
     private Rigidbody2D rigidbody;
     [SerializeField] private float forwardSpeed;
     [SerializeField] private float angularPower;
-    
-    
+    private Vector2 rbVelocity;
+
+
 
     private void Start() {
         rigidbody = GetComponent<Rigidbody2D>();
@@ -18,20 +19,27 @@ public class BallManager : MonoBehaviour
     }
 
     private void Update() {
-        if (rigidbody.velocity.x > 0 && rigidbody.velocity.y > 0) {
-            
-            //rigidbody.drag += angularPower * Time.deltaTime;
-            
-        }
-        
+        rbVelocity = rigidbody.velocity;
+
     }
 
-    public void OnMouseDown() {
-        
-        
-        //rigidbody.velocity = new Vector2(0f, 0f);
-        //rigidbody.drag = 0f;
-        
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Obstacle")
+        {
+            
+
+            var rbVelocityValue = rbVelocity.magnitude;
+            var direction = Vector2.Reflect(rbVelocity.normalized, collision.contacts[0].normal);
+
+            rigidbody.velocity = direction * Mathf.Max(rbVelocityValue, 0f);
+
+            
+
+            
+
+        }
+
 
     }
 
@@ -50,4 +58,6 @@ public class BallManager : MonoBehaviour
         
 
     }
+
+
 }

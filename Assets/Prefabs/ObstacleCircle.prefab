@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1094939161408839491}
   - component: {fileID: 3199763316405764246}
   - component: {fileID: 6959995277707730818}
+  - component: {fileID: 7676628660054492425}
   m_Layer: 0
   m_Name: Block
   m_TagString: Untagged
@@ -94,7 +95,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1104228424242631820}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -148,6 +149,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &7676628660054492425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104228424242631820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eb2d006de7d0cb4b833fc2e842d54b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2751301494227662406
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,7 +172,7 @@ GameObject:
   - component: {fileID: 8805049576770636794}
   m_Layer: 0
   m_Name: ObstacleCircle
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
