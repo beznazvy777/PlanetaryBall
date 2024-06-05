@@ -28,7 +28,7 @@ public class BlockCollisionManager : MonoBehaviour
     public void OnMouseUp()
     {
         LaunchTheBall?.Invoke(this, new LaunchTheBallEventArgs { forcePower = forcePower});
-        
+        forcePower = 0f;
     }
 
 

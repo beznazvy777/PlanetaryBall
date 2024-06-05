@@ -20,7 +20,7 @@ public class Unit : MonoBehaviour
     private void BlockCollisionManager_LaunchTheBall(object sender, BlockCollisionManager.LaunchTheBallEventArgs e)
     {
         forwardVelocityPower = e.forcePower;
-        Debug.Log(forwardVelocityPower);
+        CreateAndPullBall();
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -48,8 +48,9 @@ public class Unit : MonoBehaviour
         //Create ball gameobject,pull, and off Image
         if (isBallInteract)
         {
-            GameObject newBallObject = Instantiate(ballPrefab, spawnPoint.position, Quaternion.identity);
-            newBallObject.GetComponent<Rigidbody2D>().AddRelativeForce(spawnPoint.forward * forwardVelocityPower * Time.deltaTime);
+            GameObject newBallObject = Instantiate(ballPrefab, spawnPoint.position,Quaternion.identity);
+            newBallObject.gameObject.GetComponent<Rigidbody2D>().AddRelativeForce(spawnPoint.forward * forwardVelocityPower * 10);
+            
             ballSprite.SetActive(false);
             isBallInteract = false;
 

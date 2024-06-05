@@ -7,7 +7,7 @@ public class Walker : MonoBehaviour
     public Transform ballTransform;
     void Start()
     {
-        if(ballTransform == null) {
+        if(ballTransform != null) {
             transform.position = ballTransform.position;
         }
     }
@@ -15,6 +15,14 @@ public class Walker : MonoBehaviour
     
     void Update()
     {
-        transform.position = ballTransform.position;
+        if(ballTransform != null)
+        {
+            transform.position = ballTransform.position;
+        }
+        else
+        {
+            Debug.Log("ball is destroy");
+        }
+        
     }
 }
