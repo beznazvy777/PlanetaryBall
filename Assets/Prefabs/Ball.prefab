@@ -193,5 +193,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 611abc3fee436184eb8cd05f23a3e250, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardSpeed: 750
+  forwardSpeed: 1250
   angularPower: 0.25

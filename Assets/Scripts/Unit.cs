@@ -49,6 +49,7 @@ public class Unit : MonoBehaviour
         if (isBallInteract)
         {
             GameObject newBallObject = Instantiate(ballPrefab, spawnPoint.position,Quaternion.identity);
+            newBallObject.gameObject.transform.Rotate(0f, 90f, 0f);
             newBallObject.gameObject.GetComponent<Rigidbody2D>().AddRelativeForce(spawnPoint.forward * forwardVelocityPower * 10);
             
             ballSprite.SetActive(false);
