@@ -32,7 +32,7 @@ public class BallManager : MonoBehaviour
             var rbVelocityValue = rbVelocity.magnitude;
             var direction = Vector2.Reflect(rbVelocity.normalized, collision.contacts[0].normal);
 
-            rigidbody.velocity = direction * Mathf.Max(rbVelocityValue, 0f);
+            rigidbody.velocity = direction * Mathf.Max(rbVelocityValue * 2, 0f);
 
             
 

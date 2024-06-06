@@ -7,8 +7,12 @@ public class Unit : MonoBehaviour
     [SerializeField] private GameObject ballPrefab;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private GameObject ballSprite;
-    [SerializeField] private float forwardVelocityPower;
     [SerializeField] private BlockCollisionManager blockCollisionManager;
+
+    [Header ("Values")]
+    [SerializeField] private float forwardVelocityPower;
+    [SerializeField] private float interactCooldownSeconds;
+
     bool isBallInteract;
 
     void Start()
@@ -53,8 +57,13 @@ public class Unit : MonoBehaviour
             newBallObject.gameObject.GetComponent<Rigidbody2D>().AddRelativeForce(spawnPoint.forward * forwardVelocityPower * 10);
             
             ballSprite.SetActive(false);
-            isBallInteract = false;
+            Invoke("DisablingBallInteraction", interactCooldownSeconds);
 
         }
+    }
+
+    public void DisablingBallInteraction()
+    {
+        isBallInteract = false;
     }
 }

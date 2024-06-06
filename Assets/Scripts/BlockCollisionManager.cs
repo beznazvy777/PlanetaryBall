@@ -13,6 +13,7 @@ public class BlockCollisionManager : MonoBehaviour
 
     [SerializeField] private float forcePower;
     [SerializeField] private float forcePowerAccumulator;
+    [SerializeField] private float maxForcePowerValue;
 
     private void Start()
     {
@@ -22,7 +23,9 @@ public class BlockCollisionManager : MonoBehaviour
     {
         //Accumulate forcePower for ball throw
         
-        forcePower += forcePowerAccumulator * Time.deltaTime;   
+        forcePower += forcePowerAccumulator * Time.deltaTime;
+        if (forcePower >= maxForcePowerValue) { forcePower = maxForcePowerValue; }
+
     }
 
     public void OnMouseUp()
