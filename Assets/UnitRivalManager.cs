@@ -7,7 +7,7 @@ public class UnitRivalManager : MonoBehaviour
 {
     [SerializeField] private GameObject PlayerBall;
     NavMeshAgent navMesh;
-    //[SerializeField] private Rigidbody2D rb;
+    
 
     [Header("Values")]
     [SerializeField] private float moveSpeed;
@@ -17,35 +17,32 @@ public class UnitRivalManager : MonoBehaviour
         navMesh = GetComponent<NavMeshAgent>();
         navMesh.updateRotation = false;
         navMesh.updateUpAxis = false;
-        //if (!PlayerBall)
-            //PlayerBall = FindObjectOfType<BallManager>().gameObject;
-        //else Debug.Log("No ball");
-
-        //rb = GetComponent<Rigidbody2D>();
-
         
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        //if (!PlayerBall)
-        //{
-            PlayerBall = FindObjectOfType<BallManager>().gameObject;
-        //}
-        //else { return; }
+        
 
-        //if (PlayerBall)
-        //{
+        if (PlayerBall)
+        {
 
-            //transform.up = PlayerBall.transform.position - transform.position;
-            //rb.AddRelativeForce(-transform.up * (moveSpeed * 10) * Time.deltaTime);
+            transform.up = PlayerBall.transform.position - transform.position;
             
-        //}
-        //else
-        //{
+            navMesh.SetDestination(PlayerBall.transform.position);
+            
+        }
+        if (!PlayerBall)
+        {
 
-        //}
-        navMesh.SetDestination(PlayerBall.transform.position);
+            PlayerBall = FindObjectOfType<BallManager>().gameObject;
+            if (!PlayerBall)
+            {
+                transform.position = transform.position;
+            }
+        }
+        
+        
     }
 }
