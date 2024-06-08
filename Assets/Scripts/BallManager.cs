@@ -7,14 +7,21 @@ using UnityEngine.Animations;
 public class BallManager : MonoBehaviour
 {
     public Camera mainCamera;
-    private Rigidbody2D rigidbody;
+    [SerializeField] private GameObject ballShadowPrefab;
+    
     [SerializeField] private float forwardSpeed;
     [SerializeField] private float angularPower;
-    private Vector2 rbVelocity;
 
+    
+    Vector2 rbVelocity;
+    Rigidbody2D rigidbody;
     GameManager gameManager;
+
+
     private void Awake() {
         mainCamera = Camera.main;
+        GameObject newShadowObject = Instantiate(ballShadowPrefab,transform.position, Quaternion.identity);
+        
     }
     private void Start() {
         rigidbody = GetComponent<Rigidbody2D>();
