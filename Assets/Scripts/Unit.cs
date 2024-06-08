@@ -23,6 +23,8 @@ public class Unit : MonoBehaviour
 
     private void BlockCollisionManager_LaunchTheBall(object sender, BlockCollisionManager.LaunchTheBallEventArgs e)
     {
+
+        //Event to throw ball forward when his interact with unit
         forwardVelocityPower = e.forcePower;
         CreateAndPullBall();
     }

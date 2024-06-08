@@ -30,6 +30,7 @@ public class BlockCollisionManager : MonoBehaviour
 
     public void OnMouseUp()
     {
+        //Throw player ball and off interact with unit
         LaunchTheBall?.Invoke(this, new LaunchTheBallEventArgs { forcePower = forcePower});
         forcePower = 0f;
     }
