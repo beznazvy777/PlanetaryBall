@@ -70,7 +70,7 @@ public class UnitRivalManager : MonoBehaviour
     public void OnCollisionEnter2D (Collision2D collision) {
         
 
-        //Unit rival interact with player ball, and knocks to the side
+        //Unit rival interact with player ball,rotate and knocks to the side
         if(collision.gameObject.tag == "Ball") {
             collision.gameObject.GetComponentInChildren<BallRotator>().StartCoroutine("RotateTheBall");
                 collision.gameObject.GetComponent<Rigidbody2D>().AddRelativeForce(
