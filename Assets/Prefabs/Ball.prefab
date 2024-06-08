@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6154113115817718065}
   - component: {fileID: 2900144111361561674}
+  - component: {fileID: 5672055720376961325}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -84,6 +85,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5672055720376961325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076123475206025608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98950fcbbcf1ceb4d8a46a6e43a32c0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedRotate: 300
+  stopSpeedValue: 3
 --- !u!1 &3658542244712460528
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,5 +210,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
   ballShadowPrefab: {fileID: 9100983458692844320, guid: 7e42512180e7f7347bd1e9dcce134051, type: 3}
+  spriteObject: {fileID: 1076123475206025608}
   forwardSpeed: 1250
   angularPower: 0.25

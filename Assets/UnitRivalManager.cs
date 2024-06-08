@@ -72,15 +72,15 @@ public class UnitRivalManager : MonoBehaviour
 
         //Unit rival interact with player ball, and knocks to the side
         if(collision.gameObject.tag == "Ball") {
-            //if (collision.attachedRigidbody) {
+            collision.gameObject.GetComponentInChildren<BallRotator>().StartCoroutine("RotateTheBall");
                 collision.gameObject.GetComponent<Rigidbody2D>().AddRelativeForce(
                 new Vector2(Random.RandomRange(-1, 1), Random.RandomRange(-1, 1)) * 750f
                 );
-                return;
-            //}
+                
+            
             
         }
-        
+        return;
     }
 
     

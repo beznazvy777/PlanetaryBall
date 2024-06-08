@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Animations;
+using System;
 
 public class BallManager : MonoBehaviour
 {
+
+    public event EventHandler OnRotateInHit;
+
     public Camera mainCamera;
     [SerializeField] private GameObject ballShadowPrefab;
+    [SerializeField] private GameObject spriteObject;
     
     [SerializeField] private float forwardSpeed;
     [SerializeField] private float angularPower;
@@ -20,6 +24,8 @@ public class BallManager : MonoBehaviour
 
     private void Awake() {
         mainCamera = Camera.main;
+
+        //Create shadow of player ball
         GameObject newShadowObject = Instantiate(ballShadowPrefab,transform.position, Quaternion.identity);
         
     }
@@ -78,6 +84,8 @@ public class BallManager : MonoBehaviour
         //Force to moved ball
         rigidbody.AddRelativeForce(transform.forward * forwardSpeed * 10 * Time.deltaTime);
 
+        //Rotate player ball in hit
+        OnRotateInHit?.Invoke(this, EventArgs.Empty);
         
 
     }

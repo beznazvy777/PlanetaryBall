@@ -8,6 +8,7 @@ public class Walker : MonoBehaviour
     void Start()
     {
         if(!ballTransform) {
+            //Shadow of player ball,find target to follow
             ballTransform = FindObjectOfType<BallManager>().transform;
             transform.position = ballTransform.position;
 
@@ -23,6 +24,8 @@ public class Walker : MonoBehaviour
     {
         if(ballTransform)
         {
+
+            //shadow follow to player ball
             transform.position = ballTransform.position;
         }
         else
