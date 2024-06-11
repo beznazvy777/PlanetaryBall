@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class Destroyer : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private float timeToDestroy;
+    float timer;
     void Start()
     {
         
+        timer = 0f;
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        
+        timer += Time.deltaTime;
+        if(timer >= timeToDestroy) 
+            Destroy(gameObject);
     }
 }

@@ -1,9 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Unit : MonoBehaviour
 {
+
+    public event EventHandler OnBlockActive;
+    public event EventHandler OnBlockWait;
+    public event EventHandler OnBlockDeactive;
+
     [SerializeField] private GameObject ballPrefab;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private GameObject ballSprite;
@@ -14,9 +20,11 @@ public class Unit : MonoBehaviour
     [SerializeField] private float interactCooldownSeconds;
 
     bool isBallInteract;
+    bool isCanTrigger;
 
     void Start()
     {
+        isCanTrigger = true;
         isBallInteract = false;
         blockCollisionManager.LaunchTheBall += BlockCollisionManager_LaunchTheBall;
     }
@@ -25,13 +33,19 @@ public class Unit : MonoBehaviour
     {
 
         //Event to throw ball forward when his interact with unit
-        forwardVelocityPower = e.forcePower;
-        CreateAndPullBall();
+        
+            forwardVelocityPower = e.forcePower;
+            CreateAndPullBall();
+            isCanTrigger = false;
+            OnBlockWait?.Invoke(this, EventArgs.Empty);
+
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        //Unit interact trigger system
+    //Unit interact trigger system
+    if (isCanTrigger)
+    {
         if (collision.gameObject.tag == "Ball")
         {
             if (!isBallInteract)
@@ -41,12 +55,12 @@ public class Unit : MonoBehaviour
                 ballSprite.SetActive(true);
                 Debug.Log("Unit interact");
                 isBallInteract = true;
-                
+                OnBlockActive?.Invoke(this, EventArgs.Empty);
+
 
             }
-            
-           
         }
+    }
     }
 
     public void CreateAndPullBall()
@@ -59,7 +73,9 @@ public class Unit : MonoBehaviour
             newBallObject.gameObject.GetComponent<Rigidbody2D>().AddRelativeForce(spawnPoint.forward * forwardVelocityPower * 10);
             
             ballSprite.SetActive(false);
-            Invoke("DisablingBallInteraction", interactCooldownSeconds);
+            isBallInteract = false;
+
+            Invoke("EnabledBallInteraction", interactCooldownSeconds);
 
         }
     }
@@ -68,4 +84,11 @@ public class Unit : MonoBehaviour
     {
         isBallInteract = false;
     }
+
+    public void EnabledBallInteraction()
+    {
+        OnBlockDeactive?.Invoke(this, EventArgs.Empty);
+        isCanTrigger = true;
+    }
+
 }

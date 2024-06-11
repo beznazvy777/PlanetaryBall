@@ -7,7 +7,10 @@ public class GoalManager : MonoBehaviour
 {
     public event EventHandler OnGoal;
 
+    [SerializeField] private GameObject goalPrefab;
+
     GameManager gameManager;
+
 
     private void Start() {
         gameManager = FindObjectOfType<GameManager>();
@@ -19,6 +22,7 @@ public class GoalManager : MonoBehaviour
             Destroy(collision.gameObject);
             OnGoal?.Invoke(this, EventArgs.Empty);
             gameManager.RestartGameBall();
+            Instantiate(goalPrefab, new Vector3(0f, 0f, 0f), Quaternion.identity);
 
 
 
