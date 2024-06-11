@@ -33,11 +33,13 @@ public class Unit : MonoBehaviour
     {
 
         //Event to throw ball forward when his interact with unit
-        
+        if (!isCanTrigger) {
             forwardVelocityPower = e.forcePower;
             CreateAndPullBall();
-            isCanTrigger = false;
+            
             OnBlockWait?.Invoke(this, EventArgs.Empty);
+        }
+            
 
     }
 
@@ -56,7 +58,7 @@ public class Unit : MonoBehaviour
                 Debug.Log("Unit interact");
                 isBallInteract = true;
                 OnBlockActive?.Invoke(this, EventArgs.Empty);
-
+                isCanTrigger = false;
 
             }
         }

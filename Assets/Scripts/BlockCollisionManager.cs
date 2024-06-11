@@ -19,6 +19,8 @@ public class BlockCollisionManager : MonoBehaviour
     {
         forcePower = 0f;
     }
+
+    
     public void OnMouseDrag()
     {
         //Accumulate forcePower for ball throw
