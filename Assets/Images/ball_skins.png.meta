@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 93eb059cb93286e48bc42e0fcd75025d
+guid: 1441088e0d0a4ce488180835810b543a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: vecteezy_twitch-overlay-gamer-and-streamer_17374630_1
+      name: ball_skins_7
       rect:
         serializedVersion: 2
-        x: 58
-        y: 1516
-        width: 1401
-        height: 864
+        x: 2049
+        y: 2133
+        width: 1027
+        height: 1015
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98c6c8a8b4119e74bad846d73e039e44
-      internalID: -1303131574
+      spriteID: 488e7d1f233093d4aa79b505116b9fac
+      internalID: 892146181
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vecteezy_twitch-overlay-gamer-and-streamer_17374630_4
+      name: ball_skins_8
       rect:
         serializedVersion: 2
-        x: 1567
-        y: 1970
-        width: 821
-        height: 381
+        x: 471
+        y: 2100
+        width: 1040
+        height: 1039
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9989fa1a80997ef4db4720855943e205
-      internalID: -711628975
+      spriteID: 477b583dbce6ffe4fa5964d50a1e56b9
+      internalID: -1677066372
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vecteezy_twitch-overlay-gamer-and-streamer_17374630_5
+      name: ball_skins_15
       rect:
         serializedVersion: 2
-        x: 1567
-        y: 1436
-        width: 821
-        height: 381
+        x: 441
+        y: 420
+        width: 1045
+        height: 1011
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c728346df612634f9cb35690263f66c
-      internalID: -71795093
+      spriteID: 25dfca0ddab48de428a4315ac2efb6e6
+      internalID: -94759767
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vecteezy_twitch-overlay-gamer-and-streamer_17374630_9
+      name: ball_skins_20
       rect:
         serializedVersion: 2
-        x: 322
-        y: 608
-        width: 850
-        height: 638
+        x: 2032
+        y: 413
+        width: 1038
+        height: 1022
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7f9e129b66f7574995db90076e81892
-      internalID: 740242571
+      spriteID: 13bdef68f758c8d44ae045ac0af7ee50
+      internalID: 2143135110
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vecteezy_twitch-overlay-gamer-and-streamer_17374630_11
+      name: ball_skins_23
       rect:
         serializedVersion: 2
-        x: 1567
-        y: 754
-        width: 821
-        height: 381
+        x: 3097
+        y: 974
+        width: 10
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,71 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77cc554f435b8b1428a7cfbdca12dc23
-      internalID: 2076792017
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: vecteezy_twitch-overlay-gamer-and-streamer_17374630_13
-      rect:
-        serializedVersion: 2
-        x: 107
-        y: 145
-        width: 729
-        height: 328
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b7557e2b0f32d254b9899e4b55977c4a
-      internalID: -1237417363
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: vecteezy_twitch-overlay-gamer-and-streamer_17374630_0
-      rect:
-        serializedVersion: 2
-        x: 842
-        y: 143
-        width: 717
-        height: 332
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 69281a87179f63747ac2c93119376d3b
-      internalID: -933262171
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: vecteezy_twitch-overlay-gamer-and-streamer_17374630_2
-      rect:
-        serializedVersion: 2
-        x: 1601
-        y: 145
-        width: 753
-        height: 326
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 502991e538bcb514ebb988e635fda069
-      internalID: -227043385
+      spriteID: 646a8d65ed4f5a54097c81b1b6f637c5
+      internalID: -1981597461
       vertices: []
       indices: 
       edges: []
@@ -288,20 +225,37 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      vecteezy_twitch-overlay-gamer-and-streamer_17374630_0: -933262171
-      vecteezy_twitch-overlay-gamer-and-streamer_17374630_1: -1303131574
-      vecteezy_twitch-overlay-gamer-and-streamer_17374630_10: 163861147
-      vecteezy_twitch-overlay-gamer-and-streamer_17374630_11: 2076792017
-      vecteezy_twitch-overlay-gamer-and-streamer_17374630_12: 2042462880
-      vecteezy_twitch-overlay-gamer-and-streamer_17374630_13: -1237417363
-      vecteezy_twitch-overlay-gamer-and-streamer_17374630_2: -227043385
-      vecteezy_twitch-overlay-gamer-and-streamer_17374630_3: 2033575594
-      vecteezy_twitch-overlay-gamer-and-streamer_17374630_4: -711628975
-      vecteezy_twitch-overlay-gamer-and-streamer_17374630_5: -71795093
-      vecteezy_twitch-overlay-gamer-and-streamer_17374630_6: 1431868929
-      vecteezy_twitch-overlay-gamer-and-streamer_17374630_7: -583829571
-      vecteezy_twitch-overlay-gamer-and-streamer_17374630_8: 840904802
-      vecteezy_twitch-overlay-gamer-and-streamer_17374630_9: 740242571
+      ball_skins_0: 2054117375
+      ball_skins_1: -1539873515
+      ball_skins_10: 1151244050
+      ball_skins_11: -1315443576
+      ball_skins_12: 1321315407
+      ball_skins_13: 296776676
+      ball_skins_14: -762249160
+      ball_skins_15: -94759767
+      ball_skins_16: 1269584197
+      ball_skins_17: -1304661393
+      ball_skins_18: 991826341
+      ball_skins_19: -1370402988
+      ball_skins_2: -673216074
+      ball_skins_20: 2143135110
+      ball_skins_21: -2098639776
+      ball_skins_22: -1545142206
+      ball_skins_23: -1981597461
+      ball_skins_24: -1763387519
+      ball_skins_25: 1618105674
+      ball_skins_26: 255698845
+      ball_skins_27: 204258370
+      ball_skins_28: -958902973
+      ball_skins_29: 211925707
+      ball_skins_3: -2034286838
+      ball_skins_30: -1123004150
+      ball_skins_4: -2067379757
+      ball_skins_5: 1026894235
+      ball_skins_6: 108580747
+      ball_skins_7: 892146181
+      ball_skins_8: -1677066372
+      ball_skins_9: 1514913573
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
