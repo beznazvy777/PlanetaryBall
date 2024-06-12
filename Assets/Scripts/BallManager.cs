@@ -21,6 +21,7 @@ public class BallManager : MonoBehaviour
     Vector2 rbVelocity;
     Rigidbody2D rigidbody;
     GameManager gameManager;
+    GameOverManager gameOverManager;
 
 
     private void Awake() {
@@ -34,6 +35,8 @@ public class BallManager : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
         gameManager = FindObjectOfType<GameManager>();
         gameManager.BallEnterInGame(this.gameObject);
+
+        gameOverManager = FindObjectOfType<GameOverManager>();
 
         
     }
@@ -114,5 +117,6 @@ public class BallManager : MonoBehaviour
         //Destroy old and restart new player ball 
         gameManager.RestartGameBall();
         Destroy(gameObject);
+        gameOverManager.liveValue--;
     }
 }

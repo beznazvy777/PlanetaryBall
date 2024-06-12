@@ -17,6 +17,7 @@ public class UnitRivalManager : MonoBehaviour
     [Header("Values")]
     [SerializeField] private float moveSpeed;
 
+    SkillsManager skillsManager;
     GameManager gameManager;
     float posYDestination;
     void Start()
@@ -24,9 +25,18 @@ public class UnitRivalManager : MonoBehaviour
         navMesh = GetComponent<NavMeshAgent>();
         navMesh.updateRotation = false;
         navMesh.updateUpAxis = false;
+
         gameManager = FindObjectOfType<GameManager>();
         gameManager.OnBallInGame += GameManager_OnBallInGame;
+
+        skillsManager = FindObjectOfType<SkillsManager>();
+        skillsManager.OnSpeedRoot += SkillsManager_OnSpeedRoot;
         
+    }
+
+    private void SkillsManager_OnSpeedRoot(object sender, System.EventArgs e) {
+        //Start root
+        StartCoroutine("RootStart");
     }
 
     private void GameManager_OnBallInGame(GameObject gameObject) {
@@ -103,5 +113,13 @@ public class UnitRivalManager : MonoBehaviour
         return;
     }
 
-    
+    public IEnumerator RootStart() {
+
+        float speed = navMesh.speed;
+        navMesh.speed = navMesh.speed / 2;
+
+        yield return new WaitForSeconds(10);
+
+        navMesh.speed = speed;
+    }
 }
