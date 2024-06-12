@@ -19,7 +19,7 @@ public class Unit : MonoBehaviour
     [SerializeField] private float forwardVelocityPower;
     [SerializeField] private float interactCooldownSeconds;
 
-    bool isBallInteract;
+    public bool isBallInteract;
     bool isCanTrigger;
 
     void Start()

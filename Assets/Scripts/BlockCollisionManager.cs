@@ -5,6 +5,7 @@ using System;
 
 public class BlockCollisionManager : MonoBehaviour
 {
+    public event EventHandler OnParticlesForceEffect;
     public event EventHandler<LaunchTheBallEventArgs> LaunchTheBall;
     public class LaunchTheBallEventArgs : EventArgs
     {
@@ -15,12 +16,17 @@ public class BlockCollisionManager : MonoBehaviour
     [SerializeField] private float forcePowerAccumulator;
     [SerializeField] private float maxForcePowerValue;
 
+    
     private void Start()
     {
         forcePower = 0f;
     }
 
-    
+    public void OnMouseDown()
+    {
+        //Turn forceparticles effect in BlockVisualSystem
+        OnParticlesForceEffect?.Invoke(this, EventArgs.Empty);
+    }
     public void OnMouseDrag()
     {
         //Accumulate forcePower for ball throw

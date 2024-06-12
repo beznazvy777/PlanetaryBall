@@ -17,7 +17,7 @@ public class ScoreManager : MonoBehaviour
     }
 
     private void Update() {
-        scoreText.text = score.ToString();
+        scoreText.text = "Score: " + score.ToString();
     }
 
     private void GoalManager_OnGoal(object sender, System.EventArgs e) {

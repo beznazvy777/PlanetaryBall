@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 3eb067504ff121d4281158bddf5014a6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -211,5 +211,6 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   ballShadowPrefab: {fileID: 9100983458692844320, guid: 7e42512180e7f7347bd1e9dcce134051, type: 3}
   spriteObject: {fileID: 1076123475206025608}
+  dustCloudPrefab: {fileID: 922060576797502453, guid: ed05d754aae995e4596f4e8861b4dd01, type: 3}
   forwardSpeed: 1250
   angularPower: 0.25

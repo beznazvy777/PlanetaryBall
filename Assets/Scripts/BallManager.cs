@@ -12,6 +12,7 @@ public class BallManager : MonoBehaviour
     public Camera mainCamera;
     [SerializeField] private GameObject ballShadowPrefab;
     [SerializeField] private GameObject spriteObject;
+    [SerializeField] private GameObject dustCloudPrefab;
     
     [SerializeField] private float forwardSpeed;
     [SerializeField] private float angularPower;
@@ -86,7 +87,9 @@ public class BallManager : MonoBehaviour
 
         //Rotate player ball in hit
         OnRotateInHit?.Invoke(this, EventArgs.Empty);
-        
+
+        //Create dust cloud effect in hit on ball
+        Instantiate(dustCloudPrefab, transform.position, Quaternion.identity);
 
     }
 

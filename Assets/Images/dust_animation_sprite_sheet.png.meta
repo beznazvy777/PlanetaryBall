@@ -1,0 +1,371 @@
+fileFormatVersion: 2
+guid: d8af2b4928b762b41b83f3d1e3746da3
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dust_animation_sprite_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 431
+        width: 60
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 516421b645aaf2c49858ef1bde820a4c
+      internalID: -14334843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dust_animation_sprite_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 408
+        width: 101
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94b0731523e2464478a239751b5b0db4
+      internalID: -639146723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dust_animation_sprite_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 372
+        width: 144
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58847c956e69a404c822f2ba92bdd34c
+      internalID: -460577886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dust_animation_sprite_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 354
+        width: 168
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aabd28a2e8420042aa9bf7d9206a69d
+      internalID: 1876174670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dust_animation_sprite_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 356
+        width: 198
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2db1c54e08d7bce4eb36c81d979235ce
+      internalID: 1463778197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dust_animation_sprite_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 139
+        width: 163
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d4c7243fae7d1d4ba61df319d818e07
+      internalID: -1389689484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dust_animation_sprite_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 143
+        width: 165
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f208feda94b7b9468fd0a7fa4b35a05
+      internalID: -404513376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dust_animation_sprite_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 148
+        width: 162
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 502389163523ebb43a380cf53b3381c0
+      internalID: 408316422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dust_animation_sprite_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 137
+        width: 181
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a46fd09866a25a48b7b431dee8a463f
+      internalID: 1812103556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dust_animation_sprite_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 143
+        width: 155
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f015f62bee1f56843b343974bd01abab
+      internalID: 1767532905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      dust_animation_sprite_sheet_0: -14334843
+      dust_animation_sprite_sheet_1: -639146723
+      dust_animation_sprite_sheet_10: -697567652
+      dust_animation_sprite_sheet_11: 1788012245
+      dust_animation_sprite_sheet_12: -711140966
+      dust_animation_sprite_sheet_13: -404513376
+      dust_animation_sprite_sheet_14: 408316422
+      dust_animation_sprite_sheet_15: 1791263384
+      dust_animation_sprite_sheet_16: 1812103556
+      dust_animation_sprite_sheet_17: 501585754
+      dust_animation_sprite_sheet_18: 1750888137
+      dust_animation_sprite_sheet_19: 1125048896
+      dust_animation_sprite_sheet_2: -460577886
+      dust_animation_sprite_sheet_20: -1411073860
+      dust_animation_sprite_sheet_21: -265767320
+      dust_animation_sprite_sheet_22: 1217244858
+      dust_animation_sprite_sheet_23: -637561070
+      dust_animation_sprite_sheet_24: 1767532905
+      dust_animation_sprite_sheet_25: -1688906622
+      dust_animation_sprite_sheet_26: 1356963429
+      dust_animation_sprite_sheet_27: -1766021361
+      dust_animation_sprite_sheet_28: 980671491
+      dust_animation_sprite_sheet_29: 1045932501
+      dust_animation_sprite_sheet_3: 1876174670
+      dust_animation_sprite_sheet_30: 338555654
+      dust_animation_sprite_sheet_31: -1303623513
+      dust_animation_sprite_sheet_32: 933265284
+      dust_animation_sprite_sheet_33: -309616410
+      dust_animation_sprite_sheet_4: 1463778197
+      dust_animation_sprite_sheet_5: -897262653
+      dust_animation_sprite_sheet_6: -1846432439
+      dust_animation_sprite_sheet_7: 545445580
+      dust_animation_sprite_sheet_8: -950519911
+      dust_animation_sprite_sheet_9: -1389689484
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
