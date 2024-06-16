@@ -24,6 +24,9 @@ public class BallManager : MonoBehaviour
     GameOverManager gameOverManager;
 
 
+    bool canMove;
+    SkillsManager skillsManager;
+
     private void Awake() {
         mainCamera = Camera.main;
 
@@ -37,8 +40,19 @@ public class BallManager : MonoBehaviour
         gameManager.BallEnterInGame(this.gameObject);
 
         gameOverManager = FindObjectOfType<GameOverManager>();
+        skillsManager = FindObjectOfType<SkillsManager>();
+        skillsManager.OnMenuIsOpen += SkillsManager_OnMenuIsOpen;
+        skillsManager.OnMenuIsClosed += SkillsManager_OnMenuIsClosed;
 
         
+    }
+
+    private void SkillsManager_OnMenuIsClosed(object sender, EventArgs e) {
+        canMove = true;
+    }
+
+    private void SkillsManager_OnMenuIsOpen(object sender, EventArgs e) {
+        canMove = false;
     }
 
     private void Update() {
@@ -84,15 +98,17 @@ public class BallManager : MonoBehaviour
     }
 
     public void OnMouseUp() {
+        if (canMove) {
+            //Force to moved ball
+            rigidbody.AddRelativeForce(transform.forward * forwardSpeed * 10 * Time.deltaTime);
 
-        //Force to moved ball
-        rigidbody.AddRelativeForce(transform.forward * forwardSpeed * 10 * Time.deltaTime);
+            //Rotate player ball in hit
+            OnRotateInHit?.Invoke(this, EventArgs.Empty);
 
-        //Rotate player ball in hit
-        OnRotateInHit?.Invoke(this, EventArgs.Empty);
-
-        //Create dust cloud effect in hit on ball
-        Instantiate(dustCloudPrefab, transform.position, Quaternion.identity);
+            //Create dust cloud effect in hit on ball
+            Instantiate(dustCloudPrefab, transform.position, Quaternion.identity);
+        }
+        
 
     }
 

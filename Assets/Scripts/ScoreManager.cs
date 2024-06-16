@@ -10,6 +10,7 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private int pointsWhenHit;
     [SerializeField] private int goals;
 
+
     [SerializeField] private Text scoreText;
     GoalManager goalManager;
 

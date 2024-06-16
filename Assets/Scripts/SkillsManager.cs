@@ -8,6 +8,8 @@ public class SkillsManager : MonoBehaviour
 {
     public event EventHandler OnSpeedRoot;
     public event EventHandler OnBonusLive;
+    public event EventHandler OnMenuIsOpen;
+    public event EventHandler OnMenuIsClosed;
     [Header("Use Values")]
     [SerializeField] public int speedRootValues;
     [SerializeField] public int bonusLiveValues;
@@ -17,12 +19,15 @@ public class SkillsManager : MonoBehaviour
     [Header("Text")]
     [SerializeField] private Text speedRootText;
     [SerializeField] private Text bonusLiveText;
+    [Header("No Money Panel")]
+    [SerializeField] private GameObject noMoneyPanel;
 
 
     ScoreManager scoreManager;
     void Start()
     {
-        scoreManager = GetComponent<ScoreManager>(); 
+        scoreManager = GetComponent<ScoreManager>();
+        noMoneyPanel.SetActive(false);
     }
 
     
@@ -60,6 +65,9 @@ public class SkillsManager : MonoBehaviour
             speedRootValues++;
             speedRootText.text = speedRootValues.ToString();
         }
+        else {
+            StartCoroutine("NoScorePanel");
+        }
     }
 
     public void BuyBonusLive() {
@@ -68,5 +76,23 @@ public class SkillsManager : MonoBehaviour
             bonusLiveValues++;
             bonusLiveText.text = bonusLiveValues.ToString();
         }
+        else {
+            StartCoroutine("NoScorePanel");
+        }
     }
+
+    public IEnumerator NoScorePanel() {
+        noMoneyPanel.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
+        noMoneyPanel.SetActive(false);
+    }
+
+    public void MenuOpen() {
+        OnMenuIsOpen?.Invoke(this, EventArgs.Empty);
+    }
+
+    public void MenuClosed() {
+        OnMenuIsClosed?.Invoke(this, EventArgs.Empty);
+    }
+
 }

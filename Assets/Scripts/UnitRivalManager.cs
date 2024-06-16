@@ -20,8 +20,11 @@ public class UnitRivalManager : MonoBehaviour
     SkillsManager skillsManager;
     GameManager gameManager;
     float posYDestination;
+    bool canMove;
     void Start()
     {
+        canMove = true;
+
         navMesh = GetComponent<NavMeshAgent>();
         navMesh.updateRotation = false;
         navMesh.updateUpAxis = false;
@@ -31,7 +34,17 @@ public class UnitRivalManager : MonoBehaviour
 
         skillsManager = FindObjectOfType<SkillsManager>();
         skillsManager.OnSpeedRoot += SkillsManager_OnSpeedRoot;
+        skillsManager.OnMenuIsOpen += SkillsManager_OnMenuIsOpen;
+        skillsManager.OnMenuIsClosed += SkillsManager_OnMenuIsClosed;
         
+    }
+
+    private void SkillsManager_OnMenuIsClosed(object sender, System.EventArgs e) {
+        canMove = true;
+    }
+
+    private void SkillsManager_OnMenuIsOpen(object sender, System.EventArgs e) {
+        canMove = false;
     }
 
     private void SkillsManager_OnSpeedRoot(object sender, System.EventArgs e) {
@@ -59,38 +72,45 @@ public class UnitRivalManager : MonoBehaviour
             RunAnimationBack.SetActive(true);
         }
 
+        if (canMove) {
+            if (PlayerBall) {
 
-        if (PlayerBall)
-        {
+                // Rotate and moving unit(rival) to target (player ball)
+                //Vector3 direction = PlayerBall.transform.position - this.transform.position;
 
-            // Rotate and moving unit(rival) to target (player ball)
-            //Vector3 direction = PlayerBall.transform.position - this.transform.position;
-            
-            //float angle = Mathf.Atan2(direction.y, direction.x);
-            //this.transform.rotation = Quaternion.Euler(0f,0f,angle * Mathf.Rad2Deg);
-
-
-                
-            navMesh.SetDestination(PlayerBall.transform.position);
+                //float angle = Mathf.Atan2(direction.y, direction.x);
+                //this.transform.rotation = Quaternion.Euler(0f,0f,angle * Mathf.Rad2Deg);
 
 
-            
+
+                navMesh.SetDestination(PlayerBall.transform.position);
+
+
+
+            }
+
+            if (!PlayerBall) {
+
+
+                //Rotate and moving unit(rival) to waitPoint
+                //Vector3 direction = RivalIdlePoint.position - this.transform.position;
+
+                //float angle = Mathf.Atan2(direction.y, direction.x);
+
+                //this.transform.rotation = Quaternion.Euler(0f, 0f, angle * Mathf.Rad2Deg);
+                navMesh.SetDestination(RivalIdlePoint.position);
+
+            }
+
+            posYDestination = transform.position.y;
+        }
+        else {
+            navMesh.SetDestination(transform.position);
         }
 
-        if (!PlayerBall) {
+        
 
-
-            //Rotate and moving unit(rival) to waitPoint
-            //Vector3 direction = RivalIdlePoint.position - this.transform.position;
-
-            //float angle = Mathf.Atan2(direction.y, direction.x);
-            
-            //this.transform.rotation = Quaternion.Euler(0f, 0f, angle * Mathf.Rad2Deg);
-            navMesh.SetDestination(RivalIdlePoint.position);
-            
-        }
-
-        posYDestination = transform.position.y;
+        
 
 
 

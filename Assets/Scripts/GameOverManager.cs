@@ -3,12 +3,20 @@ using System.Collections.Generic;
 using Unity.Burst.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class GameOverManager : MonoBehaviour
 {
-    
+    public event EventHandler OnGameIsOver;
     [SerializeField] private Text textLive;
     public float liveValue;
+
+    [Header("Winner Panel")]
+    [SerializeField] private GameObject winnerPanelUI;
+    [SerializeField] private Text winnerTextScore;
+
+    [Header("Game Over Panel")]
+    [SerializeField] private GameObject gameOverPanelUI;
 
     SkillsManager skillManager;
     ScoreManager scoreManager;
@@ -19,7 +27,9 @@ public class GameOverManager : MonoBehaviour
 
         scoreManager = GetComponent<ScoreManager>();
         scoreManager.OnPlayerWin += ScoreManager_OnPlayerWin;
-        
+
+        winnerPanelUI.SetActive(false);
+        gameOverPanelUI.SetActive(false);
     }
 
     private void ScoreManager_OnPlayerWin(object sender, System.EventArgs e) {
@@ -38,14 +48,18 @@ public class GameOverManager : MonoBehaviour
         if(liveValue <= 0) {
             liveValue = 0;
             GameOver();
+            OnGameIsOver?.Invoke(this, EventArgs.Empty);
         }
     }
 
     public void GameOver() {
         Debug.Log("Game Over!");
+        gameOverPanelUI.SetActive(true);
     }
 
     public void PlayerWinGame() {
+        winnerPanelUI.SetActive(true);
+        winnerTextScore.text = "SCORE: " + scoreManager.score.ToString();
         Debug.Log("Player Win Game");
     }
 }
