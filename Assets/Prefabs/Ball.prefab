@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6154113115817718065
 Transform:
   m_ObjectHideFlags: 0
@@ -415,6 +415,10 @@ MonoBehaviour:
   dustCloudPrefab: {fileID: 922060576797502453, guid: ed05d754aae995e4596f4e8861b4dd01, type: 3}
   forwardSpeed: 1250
   angularPower: 0.25
+  standartSkin: {fileID: 1076123475206025608}
+  galaxySkin: {fileID: 8376441710531924733}
+  discoSkin: {fileID: 2496734858223664629}
+  goldSkin: {fileID: 1362075755416175189}
 --- !u!1 &8376441710531924733
 GameObject:
   m_ObjectHideFlags: 0

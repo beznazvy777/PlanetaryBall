@@ -10,6 +10,8 @@ public class UnitRivalManager : MonoBehaviour
     [SerializeField] private Transform RivalIdlePoint;
     [SerializeField] private GameObject RunAnimationFront;
     [SerializeField] private GameObject RunAnimationBack;
+    [SerializeField] private GameObject RootEffect;
+
 
     NavMeshAgent navMesh;
     
@@ -137,9 +139,11 @@ public class UnitRivalManager : MonoBehaviour
 
         float speed = navMesh.speed;
         navMesh.speed = navMesh.speed / 2;
+        RootEffect.SetActive(true);
 
         yield return new WaitForSeconds(10);
 
+        RootEffect.SetActive(false);
         navMesh.speed = speed;
     }
 }

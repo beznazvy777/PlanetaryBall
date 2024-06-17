@@ -21,16 +21,31 @@ public class SkillsManager : MonoBehaviour
     [SerializeField] private Text bonusLiveText;
     [Header("No Money Panel")]
     [SerializeField] private GameObject noMoneyPanel;
+    [SerializeField] private GameObject alreadyAvailablePanel;
 
 
     ScoreManager scoreManager;
+    SkinManager skinManager;
     void Start()
     {
         scoreManager = GetComponent<ScoreManager>();
+        skinManager = GetComponent<SkinManager>();
+
+        skinManager.OnNotEnoughMoney += SkinManager_OnNotEnoughMoney;
+        skinManager.OnAlreadyAvailablePanel += SkinManager_OnAlreadyAvailablePanel;
         noMoneyPanel.SetActive(false);
     }
 
-    
+    private void SkinManager_OnAlreadyAvailablePanel(object sender, EventArgs e)
+    {
+        StartCoroutine("AlreadyAvailablePanel");
+    }
+
+    private void SkinManager_OnNotEnoughMoney(object sender, EventArgs e)
+    {
+        StartCoroutine("NoScorePanel");
+    }
+
     void Update()
     {
         
@@ -85,6 +100,13 @@ public class SkillsManager : MonoBehaviour
         noMoneyPanel.SetActive(true);
         yield return new WaitForSeconds(1.5f);
         noMoneyPanel.SetActive(false);
+    }
+
+    public IEnumerator AlreadyAvailablePanel()
+    {
+        alreadyAvailablePanel.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
+        alreadyAvailablePanel.SetActive(false);
     }
 
     public void MenuOpen() {

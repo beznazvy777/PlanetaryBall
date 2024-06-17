@@ -17,7 +17,13 @@ public class BallManager : MonoBehaviour
     [SerializeField] private float forwardSpeed;
     [SerializeField] private float angularPower;
 
-    
+    [Header("Skins")]
+    [SerializeField] private GameObject standartSkin;
+    [SerializeField] private GameObject galaxySkin;
+    [SerializeField] private GameObject discoSkin;
+    [SerializeField] private GameObject goldSkin;
+
+    string setSkin;
     Vector2 rbVelocity;
     Rigidbody2D rigidbody;
     GameManager gameManager;
@@ -26,6 +32,7 @@ public class BallManager : MonoBehaviour
 
     bool canMove;
     SkillsManager skillsManager;
+    SkinManager skinManager;
 
     private void Awake() {
         mainCamera = Camera.main;
@@ -44,7 +51,13 @@ public class BallManager : MonoBehaviour
         skillsManager.OnMenuIsOpen += SkillsManager_OnMenuIsOpen;
         skillsManager.OnMenuIsClosed += SkillsManager_OnMenuIsClosed;
 
-        
+        skinManager = FindObjectOfType<SkinManager>();
+        setSkin = skinManager.skins.ToString();
+        canMove = true;
+
+        Debug.Log(setSkin);
+
+        SetSelectedSkin();
     }
 
     private void SkillsManager_OnMenuIsClosed(object sender, EventArgs e) {
@@ -134,5 +147,27 @@ public class BallManager : MonoBehaviour
         gameManager.RestartGameBall();
         Destroy(gameObject);
         gameOverManager.liveValue--;
+    }
+
+    private void SetSelectedSkin()
+    {
+        switch (setSkin)
+        {
+            case "Default":
+                standartSkin.SetActive(true);
+                break;
+
+            case "Galaxy":
+                galaxySkin.SetActive(false);
+                break;
+
+            case "Disco":
+                discoSkin.SetActive(false);
+                break;
+
+            case "Gold":
+                goldSkin.SetActive(false);
+                break;
+        }
     }
 }
