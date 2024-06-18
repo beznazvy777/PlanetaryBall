@@ -16,7 +16,7 @@ public class SkinManager : MonoBehaviour
     public event EventHandler OnAlreadyAvailablePanel;
 
     public Skins skins;
-
+    [Header("Skin Price")]
     [SerializeField] private int galaxySkinPrice;
     [SerializeField] private int discoSkinPrice;
     [SerializeField] private int goldSkinPrice;
@@ -26,7 +26,7 @@ public class SkinManager : MonoBehaviour
     [SerializeField] private int discoSkin;
     [SerializeField] private int goldSkin;
 
-    [Space]
+    [Header("Set Skin Number")]
     [SerializeField] private int defaultSkinSetNum;
     [SerializeField] private int galaxySkinSetNum;
     [SerializeField] private int discoSkinSetNum;
@@ -127,6 +127,7 @@ public class SkinManager : MonoBehaviour
 
     public int SetSkinObject(int number)
     {
+        //Selected skin for player
         PlayerPrefs.SetInt("SkinNumber",number);
         setSkinNumber = PlayerPrefs.GetInt("SkinNumber");
         return setSkinNumber;
@@ -150,6 +151,7 @@ public class SkinManager : MonoBehaviour
 
     public void SkinObject()
     {
+        //Assign a number to the object
         switch (setSkinNumber)
         {
             case 0:

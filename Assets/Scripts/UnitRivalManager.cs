@@ -42,10 +42,12 @@ public class UnitRivalManager : MonoBehaviour
     }
 
     private void SkillsManager_OnMenuIsClosed(object sender, System.EventArgs e) {
+        //Ball move when menu is closed
         canMove = true;
     }
 
     private void SkillsManager_OnMenuIsOpen(object sender, System.EventArgs e) {
+        //Ball cant move when menu is closed
         canMove = false;
     }
 
@@ -82,12 +84,7 @@ public class UnitRivalManager : MonoBehaviour
 
                 //float angle = Mathf.Atan2(direction.y, direction.x);
                 //this.transform.rotation = Quaternion.Euler(0f,0f,angle * Mathf.Rad2Deg);
-
-
-
                 navMesh.SetDestination(PlayerBall.transform.position);
-
-
 
             }
 
@@ -109,14 +106,6 @@ public class UnitRivalManager : MonoBehaviour
         else {
             navMesh.SetDestination(transform.position);
         }
-
-        
-
-        
-
-
-
-
     }
 
     public void OnCollisionEnter2D (Collision2D collision) {
@@ -128,9 +117,6 @@ public class UnitRivalManager : MonoBehaviour
                 collision.gameObject.GetComponent<Rigidbody2D>().AddRelativeForce(
                 new Vector2(Random.RandomRange(-1, 1), Random.RandomRange(-1, 1)) * 750f
                 );
-                
-            
-            
         }
         return;
     }
