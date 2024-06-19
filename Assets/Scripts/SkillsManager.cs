@@ -78,6 +78,7 @@ public class SkillsManager : MonoBehaviour
         if(scoreManager.score >= speedRootPrice) {
             scoreManager.score -= speedRootPrice;
             speedRootValues++;
+            PlayerPrefs.SetInt("Score", scoreManager.score);
             speedRootText.text = speedRootValues.ToString();
         }
         else {
@@ -89,6 +90,7 @@ public class SkillsManager : MonoBehaviour
         if (scoreManager.score >= bonusLivePrice) {
             scoreManager.score -= bonusLivePrice;
             bonusLiveValues++;
+            PlayerPrefs.SetInt("Score", scoreManager.score);
             bonusLiveText.text = bonusLiveValues.ToString();
         }
         else {

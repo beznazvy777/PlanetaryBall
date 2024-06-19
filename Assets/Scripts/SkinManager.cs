@@ -65,6 +65,7 @@ public class SkinManager : MonoBehaviour
                 scoreManager.score -= galaxySkinPrice;
                 galaxySkin = 1;
                 PlayerPrefs.SetInt("GalaxySkin", galaxySkin);
+                PlayerPrefs.SetInt("Score", scoreManager.score);
             }
             else
             {
@@ -88,6 +89,7 @@ public class SkinManager : MonoBehaviour
                 scoreManager.score -= discoSkinPrice;
                 discoSkin = 1;
                 PlayerPrefs.SetInt("DiscoSkin", discoSkin);
+                PlayerPrefs.SetInt("Score", scoreManager.score);
             }
             else
             {
@@ -111,6 +113,7 @@ public class SkinManager : MonoBehaviour
                 scoreManager.score -= goldSkinPrice;
                 goldSkin = 1;
                 PlayerPrefs.SetInt("GoldSkin", goldSkin);
+                PlayerPrefs.SetInt("Score", scoreManager.score);
             }
             else
             {

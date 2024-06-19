@@ -55,11 +55,14 @@ public class GameOverManager : MonoBehaviour
     public void GameOver() {
         Debug.Log("Game Over!");
         gameOverPanelUI.SetActive(true);
+        scoreManager.score = 0;
+        PlayerPrefs.SetInt("Score", 0);
     }
 
     public void PlayerWinGame() {
         winnerPanelUI.SetActive(true);
         winnerTextScore.text = "SCORE: " + scoreManager.score.ToString();
+        PlayerPrefs.SetInt("Score", scoreManager.score);
         Debug.Log("Player Win Game");
     }
 }

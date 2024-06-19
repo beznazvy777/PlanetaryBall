@@ -2249,6 +2249,7 @@ GameObject:
   - component: {fileID: 539407786}
   - component: {fileID: 539407787}
   - component: {fileID: 539407788}
+  - component: {fileID: 539407789}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2365,6 +2366,25 @@ MonoBehaviour:
   galaxySkinSetNum: 1
   discoSkinSetNum: 2
   goldSkinSetNum: 3
+--- !u!114 &539407789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539407782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20900a63993235f4c88639b727639daf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorialStep: 0
+  Step0: {fileID: 540642482}
+  Step1: {fileID: 2140209126}
+  Step2: {fileID: 1076639221}
+  Step3: {fileID: 392882406}
+  Step4: {fileID: 137668446}
+  Step5: {fileID: 1654588996}
 --- !u!1 &540642482
 GameObject:
   m_ObjectHideFlags: 0
@@ -3840,6 +3860,7 @@ GameObject:
   - component: {fileID: 761372787}
   - component: {fileID: 761372789}
   - component: {fileID: 761372788}
+  - component: {fileID: 761372790}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -3912,6 +3933,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 761372786}
   m_CullTransparentMesh: 1
+--- !u!95 &761372790
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761372786}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 859e5cde25d4f1144943f75643995d30, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &787231751
 GameObject:
   m_ObjectHideFlags: 0
@@ -6262,6 +6304,7 @@ GameObject:
   - component: {fileID: 1252165203}
   - component: {fileID: 1252165205}
   - component: {fileID: 1252165204}
+  - component: {fileID: 1252165206}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -6330,6 +6373,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1252165202}
   m_CullTransparentMesh: 1
+--- !u!95 &1252165206
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252165202}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 859e5cde25d4f1144943f75643995d30, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1332553811
 GameObject:
   m_ObjectHideFlags: 0

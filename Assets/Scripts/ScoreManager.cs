@@ -26,6 +26,7 @@ public class ScoreManager : MonoBehaviour
     private void Start() {
         goalManager = FindObjectOfType<GoalManager>();
         goalManager.OnGoal += GoalManager_OnGoal;
+        score = PlayerPrefs.GetInt("Score");
     }
 
     private void Update() {
@@ -36,6 +37,7 @@ public class ScoreManager : MonoBehaviour
 
         //Update score when player ball trigger goal gates
         score += pointsWhenHit;
+        PlayerPrefs.SetInt("Score",score);
         if (goals <= 4) {
             goals++;
             VisualGoals();

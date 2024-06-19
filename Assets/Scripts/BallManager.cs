@@ -151,6 +151,7 @@ public class BallManager : MonoBehaviour
 
     private void SetSelectedSkin()
     {
+        
         switch (setSkin)
         {
             case "Default":
@@ -158,15 +159,15 @@ public class BallManager : MonoBehaviour
                 break;
 
             case "Galaxy":
-                galaxySkin.SetActive(false);
+                galaxySkin.SetActive(true);
                 break;
 
             case "Disco":
-                discoSkin.SetActive(false);
+                discoSkin.SetActive(true);
                 break;
 
             case "Gold":
-                goldSkin.SetActive(false);
+                goldSkin.SetActive(true);
                 break;
         }
     }
