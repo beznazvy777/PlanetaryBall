@@ -34,6 +34,8 @@ public class SkillsManager : MonoBehaviour
         skinManager.OnNotEnoughMoney += SkinManager_OnNotEnoughMoney;
         skinManager.OnAlreadyAvailablePanel += SkinManager_OnAlreadyAvailablePanel;
         noMoneyPanel.SetActive(false);
+        speedRootText.text = speedRootValues.ToString();
+        bonusLiveText.text = bonusLiveValues.ToString();
     }
 
     private void SkinManager_OnAlreadyAvailablePanel(object sender, EventArgs e)
