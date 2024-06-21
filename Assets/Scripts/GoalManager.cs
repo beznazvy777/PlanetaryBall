@@ -9,6 +9,9 @@ public class GoalManager : MonoBehaviour
 
     [SerializeField] private GameObject goalPrefab;
 
+    [Header("Sound")]
+    [SerializeField] private AudioSource WinnerSound;
+ 
     GameManager gameManager;
 
 
@@ -24,7 +27,7 @@ public class GoalManager : MonoBehaviour
             gameManager.RestartGameBall();
             Instantiate(goalPrefab, new Vector3(0f, 0f, 0f), Quaternion.identity);
 
-
+            WinnerSound.Play();
 
 
         }

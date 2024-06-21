@@ -19,6 +19,9 @@ public class Unit : MonoBehaviour
     [SerializeField] private float forwardVelocityPower;
     [SerializeField] private float interactCooldownSeconds;
 
+    [Header("Sound")]
+    [SerializeField] private AudioSource UnitSound;
+
     public bool isBallInteract;
     bool isCanTrigger;
 
@@ -36,7 +39,7 @@ public class Unit : MonoBehaviour
         if (!isCanTrigger) {
             forwardVelocityPower = e.forcePower;
             CreateAndPullBall();
-            
+            UnitSound.Play();
             OnBlockWait?.Invoke(this, EventArgs.Empty);
         }
             
@@ -59,6 +62,7 @@ public class Unit : MonoBehaviour
                 isBallInteract = true;
                 OnBlockActive?.Invoke(this, EventArgs.Empty);
                 isCanTrigger = false;
+                UnitSound.Play();
 
             }
         }

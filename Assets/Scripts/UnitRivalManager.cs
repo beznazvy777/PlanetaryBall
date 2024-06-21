@@ -19,6 +19,9 @@ public class UnitRivalManager : MonoBehaviour
     [Header("Values")]
     [SerializeField] private float moveSpeed;
 
+    [Header("Sound")]
+    [SerializeField] private AudioSource BallKickSound;
+
     SkillsManager skillsManager;
     GameManager gameManager;
     float posYDestination;
@@ -117,12 +120,14 @@ public class UnitRivalManager : MonoBehaviour
                 collision.gameObject.GetComponent<Rigidbody2D>().AddRelativeForce(
                 new Vector2(Random.RandomRange(-1, 1), Random.RandomRange(-1, 1)) * 750f
                 );
+            BallKickSound.Play();
         }
         return;
     }
 
     public IEnumerator RootStart() {
 
+        //Root spell active
         float speed = navMesh.speed;
         navMesh.speed = navMesh.speed / 2;
         RootEffect.SetActive(true);

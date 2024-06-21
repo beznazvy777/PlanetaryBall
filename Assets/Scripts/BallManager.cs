@@ -23,6 +23,9 @@ public class BallManager : MonoBehaviour
     [SerializeField] private GameObject discoSkin;
     [SerializeField] private GameObject goldSkin;
 
+    [Header("Sound")]
+    [SerializeField] private AudioSource BallKickSound;
+
     string setSkin;
     Vector2 rbVelocity;
     Rigidbody2D rigidbody;
@@ -91,8 +94,8 @@ public class BallManager : MonoBehaviour
 
             rigidbody.velocity = direction * Mathf.Max(rbVelocityValue * 2, 0f);
 
-            
-
+            //Play sound
+            BallKickSound.Play();
             
 
         }
@@ -120,6 +123,9 @@ public class BallManager : MonoBehaviour
 
             //Create dust cloud effect in hit on ball
             Instantiate(dustCloudPrefab, transform.position, Quaternion.identity);
+
+            //Play kick sound
+            BallKickSound.Play();
         }
         
 

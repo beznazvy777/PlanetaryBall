@@ -17,6 +17,9 @@ public class BlockCollisionManager : MonoBehaviour
     [SerializeField] private float maxForcePowerValue;
 
     
+    
+
+
     private void Start()
     {
         forcePower = 0f;
@@ -26,6 +29,7 @@ public class BlockCollisionManager : MonoBehaviour
     {
         //Turn forceparticles effect in BlockVisualSystem
         OnParticlesForceEffect?.Invoke(this, EventArgs.Empty);
+        
     }
     public void OnMouseDrag()
     {
@@ -41,6 +45,7 @@ public class BlockCollisionManager : MonoBehaviour
         //Throw player ball and off interact with unit
         LaunchTheBall?.Invoke(this, new LaunchTheBallEventArgs { forcePower = forcePower});
         forcePower = 0f;
+        
     }
 
 

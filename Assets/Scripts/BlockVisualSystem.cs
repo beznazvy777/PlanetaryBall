@@ -9,8 +9,13 @@ public class BlockVisualSystem : MonoBehaviour
     [SerializeField] private GameObject PurpleImage;
     [SerializeField] private GameObject ForceParticlesEffect;
 
+    [Header("Sound")]
+    [SerializeField] private AudioSource PowerSound;
+
     Unit unit;
     BlockCollisionManager blockCollisionManager;
+
+    
     void Start()
     {
         
@@ -27,6 +32,8 @@ public class BlockVisualSystem : MonoBehaviour
     {
         if (unit.isBallInteract) {
             ForceParticlesEffect.SetActive(true);
+            if (PowerSound)
+                PowerSound?.Play();
         }
     }
 
