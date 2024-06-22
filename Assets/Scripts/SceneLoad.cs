@@ -28,5 +28,10 @@ public class SceneLoad : MonoBehaviour
         SceneManager.LoadScene(loadLevelNumber);
     }
 
+    public void GameQuit() {
+
+        Application.Quit();
+    }
+
 
 }
